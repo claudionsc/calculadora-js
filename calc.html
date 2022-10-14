@@ -9,154 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <style>
-
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        body{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48pt;
-            background-color: rgb(189, 189, 189);
-            font-family: 'Orbitron', sans-serif;
-
-            
-        }
-        #main {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgb(189, 189, 189);
-            width: 80vw;
-            height: 100vh;
-           
-
-        }
-
-        .box{
-            background-color: white;
-            width: 50vw;
-            height: 98vh;
-
-            align-items: center;
-            justify-content: center;
-            display: flex;
-            border: 1px solid rgb(172, 171, 171);
-            border-radius: 10px;
-            box-shadow: 20px 20px 50px;
-
-        }
-
-        .numbers{
-            background-color: rgba(59, 57, 57, 0.73);
-            width: 350px;
-            height: auto;
-            padding: 18px;
-            border-radius: 10px;
-            box-shadow: 20px 20px 50px;
-        }
-
-        #number{
-            background-color: rgb(22, 32, 32);
-            color: white;
-            border: none;
-            width: 4.5rem;
-            height: 4.5rem; 
-            transition: all 200ms ease-in-out;
-                   
-        }
-
-        #number:hover{
-            background-color: cadetblue;
-            transform: scale(102%);
-        }
-
-       
-
-
-        .operators{
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-
-            height: 4.5rem;
-           
-            
-
-            
-           
-        }
-
-        .operator{
-
-            width: 4.5rem;
-            height: 4.5rem;
-            text-align: center; 
-            font-size: 24px; 
-            color: rgb(50, 50, 50);     
-            
-        }
-
-        .operator:hover{
-            transform: scale(105%);
-            transition: all 200ms ease-in-out;
-            color: aqua;
-
-        }
-
-        #igual {
-            width: 10rem;
-            height: 4.5rem;
-            
-        }
-
-        #result{
-            display: flex;
-            flex-direction: column;
-            color: rgb(40, 40, 40);
-            font-weight: bold;
-            background-color: white;
-            width: 100%;
-            height: 9rem;
-            margin-top: 5px;
-            margin-bottom: 10px;
-
-            font-size: 48px;
-            padding: 5px 30px;
-            align-items: flex-end;
-        }
-        tbody{
-            padding-top: 20px;
-        }
-
-        .calculadoh1{
-            font-size: 24px;
-            color: gray;
-        }
-
-        .calculadotbody{
-            font-size: 68px;
-            color: rgb(46, 46, 46);
-        }
-
-        #del{
-            width: 15.6rem;
-            height: 4.5rem; 
-        }
-
-        #delete{
-            width: 4.5rem;
-            height: 4.5rem; 
-        }
-
-        
-
-
-
-    </style>
+    <link rel="stylesheet" href="./assests//css/index.css">
     
 </head>
 <body>
@@ -184,25 +37,26 @@
 
                     
                     
-                    
                     <button id="del" onclick="deletar()">CE</button>
-                    <button id="delete"><</button>
-                    <input id="number" onclick="capturaNum.call(num1)" type="button" name="1"  value ="1" class="number1"></input>
-                    <input id="number" onclick="capturaNum.call(num2)" type="button" name="2" value ="2" class="number2"></input>
-                    <input id="number" onclick="capturaNum.call(num3)" type="button" value ="3" class="number3"></input>
-                    <button class="operator" onclick=" capturaNum.call(mais)" >+</button>
-                    <input id="number" onclick="capturaNum.call(num4)" type="button" value ="4" class="number4"></input>
-                    <input id="number" onclick="capturaNum.call(num5)" type="button" value ="5" class="number5"></input>
-                    <input id="number" onclick="capturaNum.call(num6)" type="button" value ="6" class="number6"></input>
-                    <button class="operator" onclick="capturaNum.call(menos)">-</button>
-                    <input id="number" onclick="capturaNum.call(num7)" type="button" value ="7" class="number7"></input>
-                    <input id="number" onclick="capturaNum.call(num8)" type="button" value ="8" class="number8"></input>
-                    <input id="number" onclick="capturaNum.call(num9)" type="button" value ="9" class="number9"></input>
-                    <button class="operator" onclick="capturaNum.call(div)">/</button>
-                    <input id="number" onclick="capturaNum.call(num0)" type="button" value ="0" class="number0"></button>
-                    
-                    <button id="igual" onclick="resultadoFinal()">=</button>
-                    <button class="operator" onclick="capturaNum.call(mult)">*</button>
+                    <div class="cont-number">
+                        <button id="delete"><</button>
+                        <input id="number" onclick="capturaNum.call(num1)" type="button" name="1"  value ="1" class="number1"></input>
+                        <input id="number" onclick="capturaNum.call(num2)" type="button" name="2" value ="2" class="number2"></input>
+                        <input id="number" onclick="capturaNum.call(num3)" type="button" value ="3" class="number3"></input>
+                        <button class="operator" onclick=" capturaNum.call(mais)" >+</button>
+                        <input id="number" onclick="capturaNum.call(num4)" type="button" value ="4" class="number4"></input>
+                        <input id="number" onclick="capturaNum.call(num5)" type="button" value ="5" class="number5"></input>
+                        <input id="number" onclick="capturaNum.call(num6)" type="button" value ="6" class="number6"></input>
+                        <button class="operator" onclick="capturaNum.call(menos)">-</button>
+                        <input id="number" onclick="capturaNum.call(num7)" type="button" value ="7" class="number7"></input>
+                        <input id="number" onclick="capturaNum.call(num8)" type="button" value ="8" class="number8"></input>
+                        <input id="number" onclick="capturaNum.call(num9)" type="button" value ="9" class="number9"></input>
+                        <button class="operator" onclick="capturaNum.call(div)">/</button>
+                        <input id="number" onclick="capturaNum.call(num0)" type="button" value ="0" class="number0"></button>
+                        
+                        <button id="igual" onclick="resultadoFinal()">=</button>
+                        <button class="operator" onclick="capturaNum.call(mult)">*</button>
+                    </div>
         
 
                 </div>
@@ -215,113 +69,6 @@
         </div>
     
 
-        <script>
-
-            
-            var operator = document.querySelector(".operator")
-            
-            var result = document.querySelector("#result")
-            var btn = document.querySelectorAll('[id*=number]')
-            var h1 = document.querySelector('.h1')
-            var td = document.querySelector('td')
-            var tbody = document.querySelector('tbody')
-            var thead = document.querySelector('#thead')
-
-           
-
-           const num1 = {
-            num: 1
-           }
-           const num2 = {
-            num: 2
-           }
-           const num3 = {
-            num: 3
-           }
-           const num4 = {
-            num: 4
-           }
-           const num5 = {
-            num: 5
-           }
-           const num6 = {
-            num: 6
-           }
-           const num7 = {
-            num: 7
-           }
-           const num8 = {
-            num: 8
-           }
-           const num9 = {
-            num: 9
-           }
-           const num0 = {
-            num: 0
-           }
-
-           const mais = {
-            num: "+"
-           }
-
-           const menos = {
-            num: "-"
-           }
-           const div = {
-            num: "/"
-           }
-           const mult = {
-            num: "*"
-           }
-
-       
-        
-
-           function capturaNum(obj){
-            
-            
-           
-            let tableHead = document.createElement('th')
-            var exibeNum = this.num
-            tableHead.innerHTML = exibeNum
-
-          
-            
-            h1.appendChild(tableHead) == `
-            <th>${tableHead}</th>
-            
-            `
-            td.innerHTML = this.num
-     }
-
-
-    
-
-        function resultadoFinal(){
-
-           var resultadoB =  document.querySelector('.h1').textContent;
-            
-           thead.classList.add('calculadoh1')
-           tbody.classList.add('calculadotbody')
-
-           if(resultadoB)
-           {
-
-            document.querySelector('td').innerHTML = eval(resultadoB)
-            
-        }
-            
-
-        
-        }
-
-        function deletar(){
-            td.innerHTML = "0";
-            h1.innerHTML = ""
-        }
-
-           
-
-        </script>
+        <script src="./assests//js/index.js" ></script>
 </body>
 </html>
